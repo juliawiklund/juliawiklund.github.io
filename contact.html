@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewBanke</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="MainPage.js"></script>
+    <script src="https://kit.fontawesome.com/e840042faa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bio.css">
+
+</head>
+<body>
+<section class="showcase">
+    <video src="Won'tPlayMySong.mp4" muted loop autoplay></video>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row header-row">
+            <header>
+                <h2 class="logo"><a href="index.html">New Banke</a></h2>
+                <div class="toggle"><i onclick="changeIcon(this)" class="fas fa-bars"></i></div>
+            </header>
+        </div>
+        <div class="row form-row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 form-col">
+                <h3>Contact Us</h3>
+                <form class="form needs-validation" novalidate action=https://formsubmit.co/newbanke@gmail.com" method="POST">
+                     <div class="form-group">
+                         <label for="firstname">First Name</label>
+                         <input type="text" class="form-control" name="firstname" id="firstname" required>
+                         <div class="invalid-feedback">first name is required</div>
+                     </div>
+                     <div class="form-group">
+                         <label for="lastname">Last Name</label>
+                         <input type="text" class="form-control" name="lastname" id="lastname" required>
+                         <div class="invalid-feedback">last name is required</div>
+                     </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" onchange="validate_email()" required>
+                        <div class="invalid-feedback">"email format not accepted"</div>
+                        <div id="wrongEmail"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" style="color:black" name="message" id="message" required></textarea>
+                        <div class="invalid-feedback">message is required</div>
+                    </div>
+                    <button class="btn btn-light" type="submit">Send</button>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row social-row">
+            <ul class="social">
+                <li><a href="https://www.tiktok.com/@newbanke?"><i class="fab fa-tiktok"></i></a></li>
+                <li><a href="https://newbanke.bandcamp.com/"><i class="fab fa-bandcamp"></i></a></li>
+                <li><a href="#"><i class="fab fa-spotify"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC3FZkbYm4ys4ilAeElKqbUA/videos"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="underlay"></div>
+</section>
+
+
+<div class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+<script>
+    function changeIcon(x){
+        if (x.classList.contains('fa-bars')) {
+            x.classList.toggle('fa-times');
+        } else {
+            x.classList.toggle('fa-bars');
+        }
+    }
+
+    const showcase = document.querySelector('.showcase')
+    const menuToggle = document.querySelector('.toggle')
+    menuToggle.addEventListener('click', () =>{
+        showcase.classList.toggle('active')
+    })
+
+    let form = document.querySelector('.needs-validation');
+
+    form.addEventListener('submit', function(event) {
+        if(form.checkValidity() === false){
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated')
+    })
+
+    function validate_email(){
+        const email = $("#email").val()
+        const regexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        const ok = regexp.test(email)
+        if(!ok){
+                $("#wrongEmail").html("email format not accepted")
+        }
+        else{
+             $("#wrongEmail").html("")
+        }
+    }
+
+
+</script>
+
+
+</body>
+</html>
