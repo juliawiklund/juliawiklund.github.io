@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+*{
+    font-family: Raleway, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+    transition: 0.5s;
+}
+
+.showcase.active{
+    right:300px;
+}
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 90px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    cursor: pointer;
+    font-size: 2.5em;
+}
+
+.logo a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.logo a:hover{
+    color: dimgray;
+}
+
+.toggle{
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle i{
+    font-size: 2.3em;
+}
+
+.toggle.active{
+
+}
+
+.toggle:hover{
+    color: dimgray;
+}
+
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: 4;
+}
+
+.underlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+    z-index: 2;
+}
+
+.form-row{
+    align-items: center;
+    padding: 40px 120px;
+}
+
+.form-col{
+    z-index: 10;
+}
+
+.form-col h3{
+    line-height: 1.5em;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 6;
+}
+
+.text-row{
+    align-items: center;
+    padding: 120px;
+    z-index: 10;
+}
+
+.text-col{
+    z-index: 10;
+}
+
+.text h2{
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.text h3{
+    font-size: 1.8em;
+   /* margin: 20px 0;
+   /* max-width: 600px;*/
+}
+
+.text-col p{
+    line-height: 1.1em;
+    font-size: 1.5em;
+}
+
+.single1-row{
+    padding: 100px 130px;
+    width: 100%;
+
+}
+
+.single1-imgcol{
+    z-index: 10;
+}
+
+/* org size = 3000 x 3000*/
+.single1-imgcol img{
+    width: 100%;
+    background-size: contain;
+    padding-top: 10%;
+}
+
+.single1-textcol{
+    z-index: 10;
+    padding-bottom: 10%;
+}
+
+.single1-textcol p{
+    font-size: 1.1em;
+}
+
+.single1-textcol a{
+    text-decoration: none;
+}
+
+
+.social-row .social{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 40px 90px;
+    z-index: 10;
+    display: flex;
+    list-style: none;
+}
+
+.social li {
+    padding: 0 20px 0 20px;
+    transition: 0.5s;
+    font-size: 2.2em;
+ }
+
+.social li a{
+    color: whitesmoke;
+}
+
+.social li a:hover{
+    color: dimgray;
+}
+
+.menu{
+    position: absolute;
+    top:0;
+    right:0;
+    width:300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    line-height: 3em;
+
+}
+.menu ul{
+    list-style: none;
+    position: relative;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2em;
+    cursor: pointer;
+}
+.menu li a:hover{
+    color: dimgray;
+    cursor: pointer;
+}
+
+/*
+@media all and (max-width: 1000px) {
+    .text-row{
+        padding: 130px 110px;
+    }
+
+}
+*/
+
+
+
+
