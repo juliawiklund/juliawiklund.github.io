@@ -153,26 +153,19 @@ body{
     z-index: 10;
 }
 
+
+.spotify-col{
+    z-index: 10;
+    opacity: 0.8;
+    padding: 3em;
+}
+
 /* org size = 3000 x 3000*/
 .single1-imgcol img{
     width: 100%;
     background-size: contain;
     padding-top: 10%;
 }
-
-.single1-textcol{
-    z-index: 10;
-    padding-bottom: 10%;
-}
-
-.single1-textcol p{
-    font-size: 1.1em;
-}
-
-.single1-textcol a{
-    text-decoration: none;
-}
-
 
 .social-row .social{
     position: absolute;
