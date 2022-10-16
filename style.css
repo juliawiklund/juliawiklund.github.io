@@ -111,6 +111,11 @@ body{
     font-size: 1.8em;
 }
 
+.smartlinks li a:hover{
+    color: dimgray;
+    cursor: pointer;
+}
+
 .social-row{
     align-items: center;
 }
