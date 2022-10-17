@@ -111,6 +111,54 @@ body{
     font-size: 1.8em;
 }
 
+
+
+.outer {
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+    
+.inner{
+    width: 100%; 
+    max-width: 700px;
+    overflow: hidden;
+    margin-top:10px;
+}
+
+@media screen and (max-width: 480px) {}
+.theWholeThing-row {
+    margin: 0px 20px 20px 20px;
+   /* margin-top: 10px; */ 
+}
+.smartlinks-col{
+    z-index: 11;
+    font-weight: 600;
+}
+
+
+
+.hyperDspLink{
+    display: block;
+   /* padding: 0px;*/
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+    background: rgb(255 255 255 / 17%);
+    color: white;
+    font-size: 15px;
+    /* border: 2px solid rgb(255 255 255 / 50%); */
+    font-weight: 400;
+    transition: .03s;
+    overflow: hidden;
+}
+
+.hyperShadow {
+    box-shadow: 0px 0px 25px rgb(0 0 0 / 35%);
+}
+
 .social-row{
     align-items: center;
 }
