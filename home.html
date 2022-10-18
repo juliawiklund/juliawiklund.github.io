@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="facebook-domain-verification" content="iy6iieof56px0hjymdcvnyafvaw9if" />
+    <title>NewBanke</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="MainPage.js"></script>
+    <script src="https://kit.fontawesome.com/e840042faa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<section class="showcase">
+    <video src="video/WebBoyfriendStore.mp4" muted loop autoplay></video>
+    <div class="overlay"></div>
+    <div class="row header-row">
+        <header style="justify-content: space-between;">
+            <h2 class="logo"><a href="home.html">New Banke</a></h2>
+            <div class="toggle"><i onclick="changeIcon(this)" class="fas fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <div class="row text-row">
+        <div class="col text-col">
+            <h2>Boyfriend Store</h2>
+            <h3>Live in Gamlebyen Skatepark</h3>
+        </div>
+    </div>
+    <!-- Social Media Links -->
+    <div class="row social-row">
+        <ul class="social">
+            <li><a href="https://www.tiktok.com/@newbanke?"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="https://newbanke.bandcamp.com/"><i class="fab fa-bandcamp"></i></a></li>
+            <li><a href="https://open.spotify.com/artist/6A5Ke0SSBAKmZedJGmAM6e?si=7NnZNFPyRNafw1FJH477TQ&dl_branch=1"><i class="fab fa-spotify"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UC3FZkbYm4ys4ilAeElKqbUA/videos"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="music.html">Art</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</section>
+
+<script>
+        function changeIcon(x){
+            if (x.classList.contains('fa-bars')) {
+                x.classList.toggle('fa-times');
+            } else {
+                x.classList.toggle('fa-bars');
+            }
+        }
+        const showcase = document.querySelector('.showcase');
+        const menuToggle = document.querySelector('.toggle');
+
+        menuToggle.addEventListener('click', () => {
+            showcase.classList.toggle('active')
+            menuToggle.classList.toggle('active')
+        }) 
+</script>
+
+
+</body>
+</html>
