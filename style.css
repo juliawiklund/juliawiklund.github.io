@@ -23,8 +23,10 @@ body{
     transition: 0.5s;
 }
 
+@media screen and (max-width: 480px) {}
 .showcase.active{
     right:300px;
+   /* right: 30%; */
 }
 
 .showcase header{
@@ -32,10 +34,11 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 50px 90px;
+    padding: 5% 9%;
     z-index: 10;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items:baseline;
 }
 
 .logo{
@@ -112,11 +115,60 @@ body{
 
 /******* Smart links styling *******/
 
-.container{
+.container-fluid{
     margin-top: 100 px; 
-}
-.outer {
     z-index: 10;
+    width: 100%;
+}
+
+/* *::before
+**::after */
+.coverArtWrapper{
+
+    margin: 20% 20px 10px 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+}
+
+.coverArt-col{
+    display: flex;
+    justify-content: center;
+}
+
+.coverArt-col img{
+    max-width: 170px;
+}
+
+.boyfriendStoreTitle-col{
+    margin-top: 29px;
+    font-size: 25pt;
+    line-height: 1.25em; 
+    text-align: center;
+}
+
+.newBankeTitle-col{
+   /* margin-top: 24px;*/
+    font-size: 14pt;
+    font-weight: 400; 
+    text-align: center;
+}
+
+.smartLinks-col{
+    font-weight: 600;
+    width:100%;
+    /*max-width: 700px;*/
+    overflow: hidden;
+}
+
+.smartLinks-col a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.outer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -124,20 +176,15 @@ body{
     
 .inner{
     width: 100%; 
-    max-width: 700px;
-    overflow: hidden;
-    margin-top:10px;
+ 
 }
 
-@media screen and (max-width: 480px) {}
+/*@media screen and (max-width: 480px) {}*/
 .theWholeThing-row {
-    margin: 0px 20px 20px 20px;
+    /*margin: 0px 20px 20px 20px;*/
    /* margin-top: 10px; */ 
 }
-.smartlinks-col{
-    z-index: 11;
-    font-weight: 600;
-}
+
 
 
 
@@ -191,11 +238,13 @@ body{
     cursor: pointer;
 }
 
+@media screen and (max-width: 480px) {}
 .menu{
     position: absolute;
     top:0;
     right:0;
-    width:300px;
+   /* width: 300px; */
+    width:30%;
     height: 100%;
     display: flex;
     align-items: center;
