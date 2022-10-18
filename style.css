@@ -36,7 +36,6 @@ body{
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .logo{
@@ -111,8 +110,11 @@ body{
     font-size: 1.8em;
 }
 
+/******* Smart links styling *******/
 
-
+.container{
+    margin-top: 100 px; 
+}
 .outer {
     z-index: 10;
     width: 100%;
