@@ -23,8 +23,10 @@ body{
     transition: 0.5s;
 }
 
+@media screen and (max-width: 480px) {}
 .showcase.active{
     right:300px;
+   /* right: 30%; */
 }
 
 .showcase header{
@@ -32,7 +34,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10% 15%;
+    padding: 5% 9%;
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -150,14 +152,15 @@ body{
 .newBankeTitle-col{
    /* margin-top: 24px;*/
     font-size: 14pt;
-   /* font-weight: 400; */
+    font-weight: 400; 
     text-align: center;
-    display: flex;
-    justify-content: center;
 }
 
 .smartLinks-col{
     font-weight: 600;
+    width:100%;
+    /*max-width: 700px;*/
+    overflow: hidden;
 }
 
 .smartLinks-col a{
@@ -173,9 +176,7 @@ body{
     
 .inner{
     width: 100%; 
-    max-width: 700px;
-    overflow: hidden;
-   /* margin-top:10px; */
+ 
 }
 
 /*@media screen and (max-width: 480px) {}*/
@@ -237,11 +238,13 @@ body{
     cursor: pointer;
 }
 
+@media screen and (max-width: 480px) {}
 .menu{
     position: absolute;
     top:0;
     right:0;
-    width:300px;
+   /* width: 300px; */
+    width:30%;
     height: 100%;
     display: flex;
     align-items: center;
