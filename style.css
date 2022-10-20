@@ -1,3 +1,22 @@
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/*Small devices (landscape phones, 576px and up)*/
+/*@media (min-width: 576px) { ... }
+
+/*Medium devices (tablets, 768px and up)*/
+/*@media (min-width: 768px) { ... }
+
+/*Large devices (desktops, 992px and up)*/
+/*@media (min-width: 992px) { ... }
+
+/* X-Large devices (large desktops, 1200px and up) */
+/*@media (min-width: 1200px) { ... }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+/*@media (min-width: 1400px) { ... } */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 *{
     font-family: Raleway, serif;
@@ -18,7 +37,7 @@ body{
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+   /* align-items: center; */
     z-index: 3;
     transition: 0.5s;
 }
@@ -29,8 +48,29 @@ body{
    /* right: 30%; */
 }
 
+.header-row{
+    margin:  5% 3%;
+    z-index: 10;
+}
+
+.logo-col{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 2px;
+}
+
+.menu-col{
+    display: flex;
+    justify-content: right;
+    align-items:top;
+    padding-top: 9px;
+}
+
+
+
 .showcase header{
-    position: absolute;
+   /* position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -38,12 +78,13 @@ body{
     z-index: 10;
     display: flex;
     justify-content: space-between;
-    align-items:baseline;
+    align-items:baseline; */
 }
 
 .logo{
     cursor: pointer;
     font-size: 2.5em;
+   
 }
 
 .logo a{
@@ -55,8 +96,9 @@ body{
 }
 
 .toggle{
-    position: relative;
+    position: relative; 
     cursor: pointer;
+
 }
 
 .toggle i{
@@ -116,7 +158,6 @@ body{
 /******* Smart links styling *******/
 
 .container-fluid{
-    margin-top: 100 px; 
     z-index: 10;
     width: 100%;
 }
@@ -132,7 +173,9 @@ body{
     line-height: 1.5rem;
     box-sizing: border-box;
 }
-
+.coverArt-row{
+    margin-top: 8%;    
+}
 .coverArt-col{
     display: flex;
     justify-content: center;
@@ -149,8 +192,11 @@ body{
     text-align: center;
 }
 
+.newBankeTitle-row{
+    margin-top: 2%;
+}
+
 .newBankeTitle-col{
-   /* margin-top: 24px;*/
     font-size: 14pt;
     font-weight: 400; 
     text-align: center;
@@ -158,9 +204,9 @@ body{
 
 .smartLinks-col{
     font-weight: 600;
-    width:100%;
+   /* width:100%;*/
     /*max-width: 700px;*/
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .smartLinks-col a{
