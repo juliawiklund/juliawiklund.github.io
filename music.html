@@ -15,19 +15,27 @@
     <video src="video/WebBoyfriendStore.mp4" muted loop autoplay></video>
     <div class="underlay"></div>
     <div class="overlay"></div>
-    <div class="container">
-        <div class="row header-row">
-           <header>
-                <h2 class="logo"><a href="home.html">New Banke</a></h2>
-                <div class="toggle"><i onclick="changeIcon(this)" class="fas fa-bars"></i></div>
-           </header>
-        </div>
+    <div class="container-fluid">
+            <!-- Header and menu button -->
+            <div class="row header-row">
+                <div class="col-9 col-sm-7 col-md-6 col-lg-5 col-xl-3 logo-col">
+                    <h2 class="logo"><a href="index.html" >New Banke</a></h2>
+                </div>
+                <div class="col-1 col-sm-4 col-md-4 col-lg-6 col-xl-8">
+                </div>
+                <div class="col-2 col-sm-1 col-md-2 col-lg-1 col-xl-1 toggle-col">
+                    <div class="toggle">
+                        <i onclick="changeIcon(this)" class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Spotify player -->
         <div class="row spotify-row">
-            <div class="col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
-            <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 spotify-col">
+            <div class="col-1 col-sm-2 col-md-3 col-lg-3 "></div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-6  spotify-col">
                 <iframe src="https://open.spotify.com/embed/artist/6A5Ke0SSBAKmZedJGmAM6e?utm_source=generator&theme=0" width="100%" height="280" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
+            <div class="col-1 col-sm-2 col-md-3 col-lg-3 "></div>
         </div>
          <!-- Footer with social media icons-->
          <div class="row social-row">
