@@ -22,8 +22,9 @@ No media query for `xs` since this is the default in Bootstrap */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 *{
     font-family: Raleway, serif;
-    /*margin: 0;
+    margin: 0;
     padding: 0;
+    /*
     box-sizing: border-box; 
     */
 }
@@ -33,7 +34,7 @@ body{
     color: whitesmoke;
 }
 
-
+/******** Background layers *********/
 
 .showcase{
     position: absolute;
@@ -41,17 +42,18 @@ body{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    /*
-    justify-content: space-between;
-    align-items: center; */
     z-index: 3;
     transition: 0.2s;
 }
 
-@media screen and (min-width: 480px) {}
-.showcase.active{
-    right:300px;
+@media (min-width: 320px) {  
+    .showcase.active{right:200px;}
+  }
+
+@media screen and (min-width: 480px) {
+    .showcase.active{right:300px;}
 }
+
 
 .showcase video{
     position: absolute;
@@ -210,8 +212,7 @@ body{
 /******** BIO Text ********/
 
 .text-row{
-
-    padding: 0% 20% 3% 10%;
+    padding:3% 10% 10% 10%; 
     justify-content: left;
     align-items: center;
 }
@@ -219,21 +220,10 @@ body{
     font-size: 1.2em;
 }
 
-/*
-.text-row .text-col h2{
-    font-size: 3em;
-    line-height: 1em;
-}
-
-.text-row .text-col h3{
-    font-size: 1.8em;
-}
-*/
-
 /******* Smart links styling *******/
 
 .coverArt-row{
-    margin-top: 10%;    
+    padding-top: 10%;    
 }
 .coverArt-col{
     display: flex;
@@ -243,7 +233,7 @@ body{
 .coverArt-col img{
     max-width: 170px;
 }
-
+/****** Cover art image size *******/
 @media (max-width: 383px) {  
     .coverArt-col img{max-width: 155px;} 
   }
@@ -345,7 +335,9 @@ body{
 /******* Footer *******/
 
 .social-row{
-    
+    width:100%;
+    bottom: 0;
+    position: absolute;
     padding:  5% 3%  3% 3%;
 }
 .social-col{
@@ -367,7 +359,7 @@ body{
 
 /********* Music.html *********/
 .spotify-row{
-    padding: 0% 10% 3% 10%;
+    padding:3% 10% 10% 10%; 
 }
 
 .spotify-col{
@@ -378,38 +370,50 @@ body{
 
 .form-row{
     align-items: center;
-    padding: 7% 0%; 
+    padding:3% 10% 10% 10%; 
 }
 
 /********* Menu Section **********/
-
-.menu{
+.menuSection{
     position: absolute;
-    top:0;
-    right:0;
-   /* width: 300px; */
-    width:30%;
+    top:0; 
+    right:0; 
+    width: 300px;
     height: 100%;
+    min-height: 100vh;
+
+}
+.container{
+    margin-top:50%;
+    z-index: 1;
+    line-height: 3em;
+    padding-left: 30%;
+}
+
+.container .row .col{
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-    line-height: 3em;
-}
-.menu ul{
-    list-style: none;
-    position: relative;
 }
 
-.menu li a{
+.container a{
     text-decoration: none;
     color: whitesmoke;
-    font-size: 2em;
+    font-size: 2rem;
     cursor: pointer;
 }
-.menu li a:hover{
+
+@media (max-width: 380px) {  
+    .menuSection{width:200px;}
+    .container{padding-left: 25%;}
+    .container a {font-size:1.7rem;} /*1rem = 16px*/
+  }
+
+.container a:hover{
     color: dimgray;
 }
+
+
 
 
 
