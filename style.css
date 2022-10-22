@@ -105,11 +105,11 @@ body{
 }
 
 @media (min-width: 320px) {  
-    h2 {font-size:1.8rem;} /*1rem = 16px*/
+    h2 {font-size:2.0rem;} /*1rem = 16px*/
   }
 
   @media (min-width: 380px) {  
-    h2 {font-size:2.1rem;} /*1rem = 16px*/
+    h2 {font-size:2.3rem;} /*1rem = 16px*/
   }
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {  
@@ -134,7 +134,7 @@ body{
 .logo-col{
     display: flex;
     justify-content: left;
-    padding-top: 2px;
+    padding-top: 1%;
     bottom: 0;
 }
 
@@ -142,7 +142,6 @@ body{
     display: flex;
     justify-content: right;
     align-items:center;
-    padding-top: 2px;
 }
 
 
@@ -168,8 +167,35 @@ body{
 }
 
 .toggle i{
-    font-size: 2.3em;
+    font-size: 2.3rem;
 }
+
+@media (min-width: 320px) {  
+    .toggle i {font-size:1.7rem;} /*1rem = 16px*/
+  }
+
+@media (min-width: 380px) {  
+    .toggle i {font-size:2.0rem;} /*1rem = 16px*/
+  }
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    .toggle i {font-size:2.4rem;} /*1rem = 16px*/
+  }
+   
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+  @media (min-width: 768px) {  
+    .toggle i{font-size:2.5rem;} /*1rem = 16px*/
+  }
+   
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    .toggle i {font-size:2.6rem;} /*1rem = 16px*/
+  }
+   
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    .toggle i {font-size:2.7rem;} /*1rem = 16px*/    
+  }
 
 
 .toggle.active{
