@@ -185,7 +185,7 @@ body{
 
 .text-row{
 
-    margin: 0% 10% 3% 10%;
+    padding: 0% 20% 3% 10%;
     justify-content: left;
     align-items: center;
 }
@@ -218,12 +218,20 @@ body{
     max-width: 170px;
 }
 
+@media (max-width: 383px) {  
+    .coverArt-col img{max-width: 155px;} 
+  }
+
 .boyfriendStoreTitle-col{
     margin-top: 29px;
     font-size: 25pt;
     line-height: 1.25em; 
     text-align: center;
 }
+
+@media (max-width: 383px) {  
+    .boyfriendStoreTitle-col{font-size: 20pt;} /*1rem = 16px*/
+  }
 
 .newBankeTitle-row{
     margin-top: 2%;
@@ -235,11 +243,13 @@ body{
     text-align: center;
 }
 
+@media (max-width: 383px) {  
+    .newBankeTitle-col{font-size: 12pt;} /*1rem = 16px*/
+  }
+
 .smartLinks-col{
     font-weight: 600;
-   /* width:100%;*/
-    /*max-width: 700px;*/
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .smartLinks-col a{
@@ -257,27 +267,60 @@ body{
     background: rgb(255 255 255 / 17%);
     color: white;
     font-size: 15px;
-    /* border: 2px solid rgb(255 255 255 / 50%); */
     font-weight: 400;
     transition: .03s;
     overflow: hidden;
 }
 
+@media (max-width: 383px) {  
+    .hyperDspLink {font-size:0.75rem;} /*1rem = 16px*/
+  }
+@media (max-width: 338px) {  
+    .hyperDspLink {font-size:0.62rem;} /*1rem = 16px*/
+}
+  
 .hyperShadow {
     box-shadow: 0px 0px 25px rgb(0 0 0 / 35%);
 }
+
+.linkBox{
+    display: flex;
+    align-items: center;
+}
+.linkBox img{
+    display: block;
+    height: 62px;
+    box-shadow: 0px 0px 5px #000000;
+}
+@media (max-width: 383px) {  
+    .linkBox img{height:50px;} 
+  }
+
+.streamingServiceTitle{
+    flex: 1;
+    padding: 20px;
+}
+
+@media (max-width: 383px) {  
+    .streamingServiceTitle{padding:14px} 
+  }
+
+.arrow{
+    padding: 20px;
+}
+
+@media (max-width: 383px) {  
+    .arrow{padding:14px} 
+  }
+
+
+ 
 
 /******* Footer *******/
 
 .social-row{
     
-    margin:  5% 3%  2% 3%;
-   /* height: 12%;
-   /* padding-top: 3%
-    justify-content: start;
-    position: absolute;
-    bottom: 0;
-    height: 10%; */
+    padding:  5% 3%  3% 3%;
 }
 .social-col{
     display: flex;
@@ -298,7 +341,7 @@ body{
 
 /********* Music.html *********/
 .spotify-row{
-    padding: 10% 0%;
+    padding: 0% 10% 3% 10%;
 }
 
 .spotify-col{
