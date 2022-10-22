@@ -17,12 +17,15 @@ No media query for `xs` since this is the default in Bootstrap */
 /*@media (min-width: 1400px) { ... } */
 
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 *{
     font-family: Raleway, serif;
-    margin: 0;
+    /*margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    */
 }
 
 body{
@@ -30,60 +33,123 @@ body{
     color: whitesmoke;
 }
 
+
+
 .showcase{
     position: absolute;
     right: 0;
     width: 100%;
     min-height: 100vh;
     display: flex;
+    /*
     justify-content: space-between;
-   /* align-items: center; */
+    align-items: center; */
     z-index: 3;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
-@media screen and (max-width: 480px) {}
+@media screen and (min-width: 480px) {}
 .showcase.active{
     right:300px;
-   /* right: 30%; */
 }
 
-.header-row{
-    margin:  5% 3%;
-    z-index: 10;
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: 5;
 }
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+    z-index: 2;
+}
+
+
+.underlay{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 6;
+}
+
+
+/********** Body Content **********/
+
+.container-fluid{
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+}
+
+/********* Header **********/
+.header-row{
+    display: flex;
+    justify-content: space-between;
+    margin:  5% 3%;
+    height: 12%;
+}
+
+@media (min-width: 320px) {  
+    h2 {font-size:1.8rem;} /*1rem = 16px*/
+  }
+
+  @media (min-width: 380px) {  
+    h2 {font-size:2.1rem;} /*1rem = 16px*/
+  }
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    h2 {font-size:2.4rem;} /*1rem = 16px*/
+  }
+   
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+  @media (min-width: 768px) {  
+    h2 {font-size:2.5rem;} /*1rem = 16px*/
+  }
+   
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    h2 {font-size:2.6rem;} /*1rem = 16px*/
+  }
+   
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    h2 {font-size:2.7rem;} /*1rem = 16px*/    
+  }
 
 .logo-col{
     display: flex;
     justify-content: left;
-    align-items: center;
+    padding-top: 2px;
+    bottom: 0;
+}
+
+.toggle-col{
+    display: flex;
+    justify-content: right;
+    align-items:center;
     padding-top: 2px;
 }
 
-.menu-col{
-    display: flex;
-    justify-content: right;
-    align-items:top;
-    padding-top: 9px;
-}
-
-
-
-.showcase header{
-   /* position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 5% 9%;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items:baseline; */
-}
 
 .logo{
     cursor: pointer;
-    font-size: 2.5em;
+    text-decoration: none;
+   /* font-size: 2.5em; */
    
 }
 
@@ -113,39 +179,19 @@ body{
     color: dimgray;
 }
 
-
-.showcase video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-    z-index: 5;
-}
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-color: black;
-    z-index: 2;
-}
+/******** BIO Text ********/
 
 .text-row{
-    padding: 40px 120px;
+
+    margin: 0% 10% 3% 10%;
     justify-content: left;
     align-items: center;
 }
-
 .text-col{
-    z-index: 10;
+    font-size: 1.2em;
 }
 
+/*
 .text-row .text-col h2{
     font-size: 3em;
     line-height: 1em;
@@ -154,25 +200,10 @@ body{
 .text-row .text-col h3{
     font-size: 1.8em;
 }
+*/
 
 /******* Smart links styling *******/
 
-.container-fluid{
-    z-index: 10;
-    width: 100%;
-}
-
-/* *::before
-**::after */
-.coverArtWrapper{
-
-    margin: 20% 20px 10px 20px;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    line-height: 1.5rem;
-    box-sizing: border-box;
-}
 .coverArt-row{
     margin-top: 8%;    
 }
@@ -214,29 +245,9 @@ body{
     color: inherit;
 }
 
-.outer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-    
-.inner{
-    width: 100%; 
- 
-}
-
-/*@media screen and (max-width: 480px) {}*/
-.theWholeThing-row {
-    /*margin: 0px 20px 20px 20px;*/
-   /* margin-top: 10px; */ 
-}
-
-
-
 
 .hyperDspLink{
     display: block;
-   /* padding: 0px;*/
     box-sizing: border-box;
     text-align: left;
     border-radius: 10px;
@@ -254,23 +265,29 @@ body{
     box-shadow: 0px 0px 25px rgb(0 0 0 / 35%);
 }
 
-.social-row{
-    align-items: center;
-}
+/******* Footer *******/
 
-.social-row ul{
+.social-row{
+    padding-top:  3%;
+   /* justify-content: start; */
     position: absolute;
     bottom: 0;
-    left: 0;
-    z-index: 10;
+    height: 10%;
+   
+}
+.social-col{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social{
     list-style: none;
-    padding: 40px 90px;
+  
+   
+    
 }
 
-
 .social li {
-    padding: 0 20px 0 20px;
     transition: 0.5s;
     font-size: 1.9em;
  }
@@ -284,7 +301,16 @@ body{
     cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {}
+/********* Contact.html **********/
+
+.form-row{
+    align-items: center;
+    padding: 7% 0%; 
+   /* padding: 40px 120px;*/
+}
+
+/********* Menu Section **********/
+
 .menu{
     position: absolute;
     top:0;
