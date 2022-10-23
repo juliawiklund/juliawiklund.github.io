@@ -28,6 +28,12 @@ No media query for `xs` since this is the default in Bootstrap */
     
 }
 
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
 body{
     background-color: black;
     color: whitesmoke;
@@ -337,7 +343,7 @@ body{
     width:100%;
     bottom: 0;
     position: absolute; 
-    padding:  5% 3%  3% 3%;
+    padding:  7% 3%  3% 3%;
 }
 .social-col{
     display: flex;
@@ -348,7 +354,13 @@ body{
 .social-col a{
     color: whitesmoke;
     transition: 0.5s;
-    font-size: 1.9em;
+    font-size: 1.9rem;
+}
+@media (max-width: 767px) {  
+    .social-col a{ font-size: 1.6rem;}
+}
+@media (max-width: 383px) {  
+    .social-col a{ font-size: 1.3rem;}
 }
 
 .social-col a:hover{
