@@ -139,7 +139,10 @@
     button.addEventListener(
       'click', 
       function() { 
-        fbq('track', 'clickSpotify', { });          
+        fbq('track', 'clickSpotify', { 
+            value: 0.00,
+            currency: 'SEK'
+        });          
       },
       false
     );
@@ -150,7 +153,10 @@
     button.addEventListener(
       'click', 
       function() { 
-        fbq('track', 'clickApple Music', { });          
+        fbq('track', 'clickApple Music', { 
+            value: 0.00,
+            currency: 'SEK'
+        });          
       },
       false
     );
