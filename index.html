@@ -69,7 +69,7 @@
         <div class="row smartLinks-row">
             <div class="col-2 col-sm-3 col-md-4 col-lg-4 col-xl-4"></div>
             <div class="col-8 col-sm-6 col-md-4 col-lg-4 col-xl-4 smartLinks-col">
-                <a onclick="facebookTrackEvent('clickOut');facebookTrackEvent('clickSpotify');" href="https://open.spotify.com/album/3Fwx8j3jVJ34ddn9Bn1g7t"> 
+                <a id="spotifyLink" onclick="facebookTrackEvent('clickOut');facebookTrackEvent('clickSpotify');" href="https://open.spotify.com/album/3Fwx8j3jVJ34ddn9Bn1g7t"> 
                     <span class="hyperDspLink hyperShadow">
                         <div class="linkBox"> 
                             <div>
@@ -85,7 +85,7 @@
                     </span>
                     <div class="hiddenElementToFixWhatsCalledBorderCollapse"></div>
                 </a> 
-                <a onclick="facebookTrackEvent('clickOut');facebookTrackEvent('clickApple Music');" target="_blank" href="https://music.apple.com/us/album/boyfriend-store-single/1572197781?uo=4" style="text-decoration: none;color: inherit;">
+                <a id="appleMusicLink" onclick="facebookTrackEvent('clickOut');facebookTrackEvent('clickApple Music');" target="_blank" href="https://music.apple.com/us/album/boyfriend-store-single/1572197781?uo=4" style="text-decoration: none;color: inherit;">
                     <span class="hyperDspLink hyperShadow">
                         <div class="linkBox">
                             <div>
@@ -133,6 +133,30 @@
     </div>
 </section>
 
+<!-- Add Pixel Events to the spotify link click handler -->
+<script type="text/javascript">
+    var button = document.getElementById('spotifyLink');
+    button.addEventListener(
+      'click', 
+      function() { 
+        fbq('track', 'clickSpotify', { });          
+      },
+      false
+    );
+  </script>
+
+<script type="text/javascript">
+    var button = document.getElementById('appleMusicLink');
+    button.addEventListener(
+      'click', 
+      function() { 
+        fbq('track', 'clickApple Music', { });          
+      },
+      false
+    );
+  </script>
+
+<!-- Toggle between burger menu and X -->
 <script>
         function changeIcon(x){
             if (x.classList.contains('fa-bars')) {
