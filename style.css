@@ -51,7 +51,7 @@ body{
     transition: 0.2s;
 }
 /******* Activate slide menu ********/
-@media (min-width: 320px) {  
+@media (max-width: 479px) {  
     .showcase.active{right:200px;}
   }
 
@@ -109,11 +109,11 @@ body{
     display: flex;
     justify-content: space-between;
     margin:  5% 3%;
-    height: 12%;
+   /* height: 12%;*/
 }
 
-@media (min-width: 320px) {  
-    h2 {font-size:2.0rem;} /*1rem = 16px*/
+@media (max-width: 379px) {  
+    h2 {font-size:1.52rem;} /*1rem = 16px*/
   }
 
   @media (min-width: 380px) {  
@@ -176,8 +176,8 @@ body{
     font-size: 2.3rem;
 }
 
-@media (min-width: 320px) {  
-    .toggle i {font-size:1.7rem;} /*1rem = 16px*/
+@media (max-width: 379px) {  
+    .toggle i {font-size:1.5rem;} /*1rem = 16px*/
   }
 
 @media (min-width: 380px) {  
@@ -250,7 +250,7 @@ body{
 }
 
 @media (max-width: 383px) {  
-    .boyfriendStoreTitle-col{font-size: 20pt;} /*1rem = 16px*/
+    .boyfriendStoreTitle-col{font-size: 17pt;} /*1rem = 16px*/
   }
 
 .newBankeTitle-row{
