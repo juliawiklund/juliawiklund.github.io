@@ -109,7 +109,7 @@ body{
     display: flex;
     justify-content: space-between;
     margin:  5% 3%;
-   /* height: 12%;*/
+  /* height: 12%; */
 }
 
 @media (max-width: 379px) {  
@@ -355,12 +355,19 @@ body{
     transition: 0.5s;
     font-size: 1.9rem;
 }
-@media (max-width: 767px) {  
-    .social-col a{ font-size: 1.6rem;}
-}
+
 @media (max-width: 383px) {  
     .social-col a{ font-size: 1.3rem;}
 }
+
+@media (min-width: 384px) {  
+    .social-col a{ font-size: 1.6rem;}
+}
+@media (min-width: 768px){
+    .social-col a {font-size: 1.9rem}
+}
+
+
 
 .social-col a:hover{
     color: dimgray;
