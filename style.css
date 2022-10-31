@@ -216,11 +216,11 @@ body{
 /******** BIO Text ********/
 
 .text-row{
-    padding:3% 20% 10% 10%; 
+    padding:3% 20% 10% 5%; 
     justify-content: left;
     align-items: center;
 }
-.text-col{
+.text-col p{
     font-size: 1.2em;
 }
 
