@@ -36,7 +36,8 @@ No media query for `xs` since this is the default in Bootstrap */
 
 body{
     background-color: black;
-    color: whitesmoke;
+   /* color: whitesmoke; */
+   color:white;
 }
 
 /******** Background layers *********/
