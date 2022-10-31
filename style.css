@@ -109,7 +109,7 @@ body{
     display: flex;
     justify-content: space-between;
     margin:  5% 3%;
-  /* height: 12%; */
+    height: 12%; 
 }
 
 @media (max-width: 379px) {  
