@@ -109,7 +109,7 @@ body{
 .header-row{
     display: flex;
     justify-content: space-between;
-    margin:  5% 3%;
+    margin: 5% 3%;
     height: 12%; 
 }
 
@@ -233,19 +233,39 @@ body{
 /******** BIO Text ********/
 
 .text-row{
-    padding:3% 20% 15% 10%; 
+    margin-left: 3%; 
+    padding:3% 25% 0% 0%; 
     justify-content: left;
     align-items: center;
 }
-.text-col p{
-    font-size: 1.1rem;
+@media (max-width: 383px) {  
+    .text-row{padding:3% 25% 15% 1%; } 
+  }
+
+@media(max-width: 450px){
+    .text-row{padding:3% 25% 15% 1%; }
+}
+.text-col{
+  
+}
+.textWrapper{
+    padding: 2% 0% 30% 0%;
+}
+.textWrapper p{
+    font-size: 1rem;
     font-weight: 500;
+
+}
+@media(min-width: 450px){
+    .textWrapper p{
+        font-size:1.1rem;
+    }
 }
 
 /******* Smart links styling *******/
 
 .coverArt-row{
-    padding-top: 10%;    
+    padding-top: 10%;   
 }
 .coverArt-col{
     display: flex;
@@ -376,7 +396,7 @@ body{
 }
 
 @media (max-width: 383px) {  
-    .social-col a{ font-size: 1.3rem;}
+    .social-col a{ font-size: 1.6rem;}
 }
 
 @media (min-width: 384px) {  
